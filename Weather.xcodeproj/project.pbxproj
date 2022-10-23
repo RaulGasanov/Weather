@@ -12,6 +12,11 @@
 		BA17000428FAC159004E3BDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA17000328FAC159004E3BDC /* Assets.xcassets */; };
 		BA17000728FAC159004E3BDC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA17000628FAC159004E3BDC /* Preview Assets.xcassets */; };
 		BA17001528FAE900004E3BDC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA17001428FAE900004E3BDC /* Extensions.swift */; };
+		BA9D08FA2903E4E800F24FF8 /* ForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D08F92903E4E800F24FF8 /* ForecastModel.swift */; };
+		BA9D08FE2903F68600F24FF8 /* ForecastCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D08FD2903F68600F24FF8 /* ForecastCard.swift */; };
+		BA9D090029048FC600F24FF8 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D08FF29048FC600F24FF8 /* NavigationBar.swift */; };
+		BA9D09022904AFEA00F24FF8 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D09012904AFEA00F24FF8 /* WeatherView.swift */; };
+		BA9D09042904B0FF00F24FF8 /* WeatherWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9D09032904B0FF00F24FF8 /* WeatherWidget.swift */; };
 		BAD0339228FB07300093A399 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD0339128FB07300093A399 /* HomeView.swift */; };
 		BAD0339428FB31DE0093A399 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD0339328FB31DE0093A399 /* TabBar.swift */; };
 		BAD0339628FC37D20093A399 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD0339528FC37D20093A399 /* Shapes.swift */; };
@@ -28,6 +33,11 @@
 		BA17001428FAE900004E3BDC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BA17FFFC28FAC159004E3BDC /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA17FFFF28FAC159004E3BDC /* WeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherApp.swift; sourceTree = "<group>"; };
+		BA9D08F92903E4E800F24FF8 /* ForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastModel.swift; sourceTree = "<group>"; };
+		BA9D08FD2903F68600F24FF8 /* ForecastCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCard.swift; sourceTree = "<group>"; };
+		BA9D08FF29048FC600F24FF8 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavigationBar.swift; path = Weather/Views/Main/NavigationBar.swift; sourceTree = SOURCE_ROOT; };
+		BA9D09012904AFEA00F24FF8 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		BA9D09032904B0FF00F24FF8 /* WeatherWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWidget.swift; sourceTree = "<group>"; };
 		BAD0339128FB07300093A399 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		BAD0339328FB31DE0093A399 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		BAD0339528FC37D20093A399 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
@@ -59,6 +69,7 @@
 		BA17000D28FAC5CF004E3BDC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BA9D08F92903E4E800F24FF8 /* ForecastModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -95,6 +106,7 @@
 		BA17001128FAC61A004E3BDC /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				BA9D08FF29048FC600F24FF8 /* NavigationBar.swift */,
 				BAD0339328FB31DE0093A399 /* TabBar.swift */,
 			);
 			path = Navigation;
@@ -104,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				BAD0339A28FD4A670093A399 /* ForecastView.swift */,
+				BA9D09012904AFEA00F24FF8 /* WeatherView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -112,7 +125,9 @@
 			isa = PBXGroup;
 			children = (
 				BAD0339C28FD4D460093A399 /* Blur.swift */,
+				BA9D09032904B0FF00F24FF8 /* WeatherWidget.swift */,
 				BAD0339E28FDD0430093A399 /* SegmentedControl.swift */,
+				BA9D08FD2903F68600F24FF8 /* ForecastCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -222,15 +237,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA9D09042904B0FF00F24FF8 /* WeatherWidget.swift in Sources */,
+				BA9D08FE2903F68600F24FF8 /* ForecastCard.swift in Sources */,
 				BA17000228FAC159004E3BDC /* ContentView.swift in Sources */,
 				BAD0339F28FDD0430093A399 /* SegmentedControl.swift in Sources */,
 				BAD0339228FB07300093A399 /* HomeView.swift in Sources */,
 				BAD0339D28FD4D460093A399 /* Blur.swift in Sources */,
+				BA9D09022904AFEA00F24FF8 /* WeatherView.swift in Sources */,
 				BA17001528FAE900004E3BDC /* Extensions.swift in Sources */,
 				BA17000028FAC159004E3BDC /* WeatherApp.swift in Sources */,
 				BAD0339B28FD4A670093A399 /* ForecastView.swift in Sources */,
 				BAD0339428FB31DE0093A399 /* TabBar.swift in Sources */,
+				BA9D08FA2903E4E800F24FF8 /* ForecastModel.swift in Sources */,
 				BAD0339628FC37D20093A399 /* Shapes.swift in Sources */,
+				BA9D090029048FC600F24FF8 /* NavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,7 +392,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = weather.Weather;
+				PRODUCT_BUNDLE_IDENTIFIER = weatherRaul.Weather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -401,7 +421,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = weather.Weather;
+				PRODUCT_BUNDLE_IDENTIFIER = weatherRaul.Weather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

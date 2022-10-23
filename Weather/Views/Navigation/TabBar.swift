@@ -21,6 +21,7 @@ struct TabBar: View {
                     Arc()
                         .stroke(Color.tabBarBorder, lineWidth: 0.5)
                 }
+
             // MARK: Tab Items
             HStack {
                 // MARK: Expand Button
@@ -30,11 +31,12 @@ struct TabBar: View {
                     Image(systemName: "mappin.and.ellipse")
                         .frame(width: 44, height: 44)
                 }
+                
                 Spacer()
                 
                 // MARK: Navigation button
                 NavigationLink {
-                    
+                    WeatherView()
                 } label: {
                     Image(systemName: "list.star")
                         .frame(width: 44, height: 44)

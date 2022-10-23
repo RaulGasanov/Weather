@@ -17,11 +17,13 @@ struct HomeView: View {
     @State var bottomSheetPosition: BottomSheetPosition = .middle
     @State var bottomSheetTranslation: CGFloat = BottomSheetPosition.middle.rawValue
     @State var hasDragged: Bool = false
+    
     var bottomSheetTranslationProrated: CGFloat {
         (bottomSheetTranslation - BottomSheetPosition.middle.rawValue) / (BottomSheetPosition.top.rawValue - BottomSheetPosition.middle.rawValue)
     }
+    
     var body: some View {
-        NavigationStack {
+        NavigationView {
             GeometryReader { geometry in
                 let screenHeight = geometry.size.height + geometry.safeAreaInsets.top + geometry.safeAreaInsets.bottom
                 let imageOffset = screenHeight + 36
@@ -31,7 +33,7 @@ struct HomeView: View {
                     Color.background
                         .ignoresSafeArea()
                     
-                    // MARK: Background Color
+                    // MARK: Background Image
                     Image("Background")
                         .resizable()
                         .ignoresSafeArea()
@@ -43,7 +45,8 @@ struct HomeView: View {
                         .padding(.top, 257)
                         .offset(y: -bottomSheetTranslationProrated * imageOffset)
                     
-                    VStack(spacing: -10 * (1-bottomSheetTranslationProrated)) {
+                    // MARK: Current Weather
+                    VStack(spacing: -10 * (1 - bottomSheetTranslationProrated)) {
                         Text("Monreal")
                             .font(.largeTitle)
                     
@@ -82,10 +85,10 @@ struct HomeView: View {
                     TabBar(action: {
                         bottomSheetPosition = .top
                     })
-                    .offset(y: -bottomSheetTranslationProrated * 115)
+                    .offset(y: bottomSheetTranslationProrated * 115)
                 }
             }
-            .toolbar(.hidden)
+            .navigationBarHidden(true)
         }
     }
     
